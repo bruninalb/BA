@@ -1,0 +1,67 @@
+.Container {
+  width: 100%;
+  background-image: url("../../../../public/images/inicio/about.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  padding: 5rem 2.5rem;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  color: white;
+  text-align: center;
+
+  h1 {
+    //font-weight: 300;
+    font-size: 2.5rem;
+    margin-bottom: 2.5rem;
+
+    strong {
+      color: var(--pink100);
+    }
+  }
+
+  button {
+    margin-top: 2.5rem;
+    border-radius: 2rem;
+    background-color: var(--white20);
+    font-size: 1.5rem;
+    color: white;
+    border: .1rem solid white;
+    padding: .5rem 5rem;
+  }
+}
+
+.InfoContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  > span {
+    height: 10rem;
+    width: 10rem;
+    border-radius: 10rem;
+    background-color: var(--white20);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1rem;
+    > span{
+      height: 9rem;
+      width: 9rem;
+      border-radius: 9rem;
+      background-color: var(--white20);
+      display: flex;
+
+    }
+  }
+
+  > p {
+    border-radius: 1.5rem;
+    background-color: var(--white20);
+    padding: 2rem 1rem;
+    width: 70%;
+    text-align: justify;
+  }
+
+}

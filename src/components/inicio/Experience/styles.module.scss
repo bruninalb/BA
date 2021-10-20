@@ -1,0 +1,183 @@
+.Container {
+  width: 100%;
+  background-image: url("../../../../public/images/inicio/about.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-color: rgba(255,255,255, 0.6);
+  background-blend-mode: color;
+  padding: 5rem 2.5rem;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  color: white;
+  text-align: center;
+
+  h1 {
+    //font-weight: 300;
+    font-size: 2.5rem;
+    margin-bottom: 2.5rem;
+    color: var(--pink100);
+
+    strong {
+      color: var(--pink100);
+    }
+  }
+
+  button {
+    margin-top: 2.5rem;
+    border-radius: 2rem;
+    background-color: var(--white20);
+    font-size: 1.5rem;
+    color: var(--pink100);
+    border: .1rem solid var(--pink100);
+    padding: .5rem 5rem;
+  }
+}
+
+.InfoContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  > span {
+    height: 10rem;
+    width: 10rem;
+    border-radius: 10rem;
+    background-color: var(--white20);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1rem;
+    > span{
+      height: 8rem;
+      width: 8rem;
+      border-radius: 8rem;
+      background-color: var(--white20);
+      display: flex;
+
+    }
+  }
+
+  > p {
+    border-radius: 1.5rem;
+    background-color: var(--white20);
+    padding: 2rem 1rem;
+    width: 70%;
+    text-align: justify;
+    color: var(--pink100);
+  }
+
+}
+.TechnologiesContainer{
+  width: 100%;
+  max-width: 1366px;
+  margin-top: 2.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  >section{
+    max-width: 400px;
+    min-width: 300px;
+    width: 30%;
+    border-radius: 1rem;
+    background-color: var(--white20);
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    padding: .5rem;
+    margin-bottom: 1rem;
+    >span{
+      position: relative;
+      display: flex;
+      height: 5rem;
+      width: 5rem;
+    }
+    >h2{
+      margin: 1rem 0;
+      color: var(--pink100);
+    }
+    >div{
+      width: 100%;
+      background-color: var(--black20);
+      border-radius: 1rem;
+      padding: .25rem 0;
+      position: relative;
+      p{
+        z-index: 2;
+        position: sticky;
+      }
+      &:after{
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        background-color: #FF026C;
+        z-index: 1;
+        border-radius: 1rem;
+      }
+    }
+    .REACTJS{
+      &:after{
+        width: 67%;
+      }
+    }
+    .REACTNATIVE{
+      &:after{
+        width: 45%;
+      }
+    }
+    .PHP{
+      &:after{
+        width: 66%;
+      }
+    }
+    .MYSQL{
+      &:after{
+        width: 57%;
+      }
+    }
+    .LARAVEL{
+      &:after{
+        width: 75%;
+      }
+    }
+    .NEXTJS{
+      &:after{
+        width: 64%;
+      }
+    }
+    .NESTJS{
+      &:after{
+        width: 32%;
+      }
+    }
+    .JAVASCRIPT{
+      &:after{
+        width: 74%;
+      }
+    }
+    .HTML{
+      &:after{
+        width: 95%;
+      }
+    }
+    .CSS{
+      &:after{
+        width: 88%;
+      }
+    }
+    .NODEJS{
+      &:after{
+        width: 28%;
+      }
+    }
+    .TYPESCRIPT{
+      &:after{
+        width: 66%;
+      }
+    }
+  }
+}

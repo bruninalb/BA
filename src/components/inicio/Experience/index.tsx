@@ -13,7 +13,7 @@ export default function Experience() {
             <h1>Experiência</h1>
             <div className={styles.InfoContainer}>
                 <p>
-                    Desde sempre busco sempre escolher as melhores <strong>TECNOLOGIAS</strong> para o
+                    Desde sempre busco escolher as melhores <strong>TECNOLOGIAS</strong> para o
                     desenvolvimento das <strong>SOLUÇÕES</strong>! Abaixo listo algumas <strong>TECNOLOGIAS</strong> que
                     utilizo no desenvolvimento !
                 </p>

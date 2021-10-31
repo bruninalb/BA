@@ -1,0 +1,75 @@
+.Container {
+    width: 100%;
+    background-image: url("../../../../public/images/inicio/about.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-color: rgba(255,255,255, 0.6);
+    background-blend-mode: color;
+    padding: 5rem 2.5rem;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    color: white;
+    text-align: center;
+  
+    h1 {
+      //font-weight: 300;
+      font-size: 2.5rem;
+      margin-bottom: 2.5rem;
+      color: var(--pink100);
+  
+      strong {
+        color: var(--pink100);
+      }
+    }
+  
+    button {
+      margin-top: 2.5rem;
+      border-radius: 2rem;
+      background-color: var(--white20);
+      font-size: 1.5rem;
+      color: var(--pink100);
+      border: .1rem solid var(--pink100);
+      padding: .5rem 5rem;
+    }
+  }
+  
+  .InfoContainer {
+    border-radius: 1.5rem;
+    background-color: var(--white20);
+    margin-bottom: 2.5rem;
+    padding: 2rem 1rem;
+    width: 70%;
+    text-align: justify;
+    color: var(--pink100);
+  }
+  .ContactsContainer{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      a section { 
+          width: max-content;
+          display: flex;
+          align-items: center;
+          border-radius: 1.5rem;
+          background-color: var(--white20);
+          padding: .25rem 1rem;
+          margin-bottom: 1rem;
+          margin-right: 1rem;
+          margin-left: 1rem;
+          
+          > span{
+              svg{
+                  height: 2rem;
+                  width: 2rem;
+                  margin-right: 1rem;
+              }
+            } 
+            >h2{
+                font-size: 1.25rem;
+                color: var(--pink100);
+
+            }
+        }
+    }

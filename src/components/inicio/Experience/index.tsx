@@ -6,10 +6,11 @@ import NodeJS from "../../../../public/images/inicio/technologies/nodejs.svg"
 import Javascript from "../../../../public/images/inicio/technologies/javascript.svg"
 import Typescript from "../../../../public/images/inicio/technologies/typescript.svg"
 import Image from "next/image"
+import Button from "../../public/Button";
 
 export default function Experience() {
     return (
-        <article className={styles.Container}>
+        <article className={styles.Container} id="experience">
             <h1>Experiência</h1>
             <div className={styles.InfoContainer}>
                 <p>
@@ -108,8 +109,7 @@ export default function Experience() {
 
 
             </div>
-            <button>Contratar</button>
-            <div>teste</div>
+            <Button style={"pink2"}>Contratar</Button>
         </article>
 
     )

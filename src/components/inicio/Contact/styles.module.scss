@@ -43,6 +43,9 @@
     width: 70%;
     text-align: justify;
     color: var(--pink100);
+    @media screen and (max-width: 1200px){
+      width: 100%;
+    }
   }
   .ContactsContainer{
       display: flex;

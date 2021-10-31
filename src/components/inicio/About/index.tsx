@@ -1,8 +1,9 @@
 import styles from "./styles.module.scss"
+import Button from "../../public/Button";
 
 export default function About() {
     return (
-        <article className={styles.Container}>
+        <article className={styles.Container} id="about">
             <h1>Sobre</h1>
             <div className={styles.InfoContainer}>
                 <span>
@@ -25,7 +26,7 @@ export default function About() {
                 </p>
 
             </div>
-            <button>Contratar</button>
+            <Button style={"white1"}>Contratar</Button>
         </article>
     )
 }

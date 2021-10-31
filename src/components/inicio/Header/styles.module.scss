@@ -22,12 +22,6 @@
   }
   button{
     margin-top: 2.5rem;
-    border-radius: 2rem;
-    background-color: var(--white20);
-    font-size: 1.25rem;
-    color: white;
-    border: .1rem solid var(--pink100);
-    padding: .5rem 5rem;
   }
 }
 .TopContainer{
@@ -37,6 +31,20 @@
   align-items: center;
   position: absolute;
   top: 5rem;
+}
+.HeaderContainer{
+  display: flex;
+  align-items: center;
+  @media screen and (max-width: 1200px){
+    width: 100%;
+    justify-content: space-between;
+    background-color: var(--black80);
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    padding: 1rem 1rem;
+  }
 }
 .LogoContainer{
   span{
@@ -48,20 +56,136 @@
     color: white;
   }
 }
+
+.MobileMenuButton{
+  display: none;
+  font-weight: bold;
+  font-size: 2rem;
+  transform: rotate(90deg);
+  transition: all .1s;
+  @media screen and (max-width: 1200px) {
+    display: block;
+  }
+  &:hover{
+    cursor: pointer;
+    transform: rotate(90deg) scale(1.2);
+  }
+}
+.MobileMenuOn{
+  left: 0;
+}
+.MobileMenuOff{
+  left: -100%;
+}
+.MobileMenuContainer{
+  display: none;
+  @media screen and (max-width: 1200px) {
+    display: flex;
+  }
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--black90);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  overflow: auto;
+  padding: 2rem 1rem;
+  transition: all .5s;
+  >span {
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    position: absolute;
+    right: 1rem;
+    top: 2rem;
+    transition: all .5s;
+    &:hover{
+      cursor: pointer;
+      transform: scale(1.2);
+    }
+  }
+  >ul {
+    display: flex;
+    flex-flow: column;
+    list-style: none;
+    li {
+      position: relative;
+      margin-bottom: 2rem;
+      &:after{
+        content: "";
+        display: block;
+        height: .1rem;
+        position: absolute;
+        width: calc(2rem);
+        left:0;
+        right: 0;
+        margin: auto;
+        bottom: -.95rem;
+        background-color: var(--pink100);
+      }
+      &:last-child{
+        &:after{
+          display: none;
+        }
+        margin-bottom: 0;
+      }
+
+      a {
+        padding: .5rem 2rem;
+        color: white;
+        font-size: 1.25rem;
+        transition: all .25s;
+        &:hover{
+          letter-spacing: .05rem;
+        }
+      }
+    }
+  }
+}
 .MenuContainer{
-  display: flex;
+  @media screen and (max-width: 1200px) {
+    display: none;
+  }
 
   ul{
     display: flex;
     list-style: none;
     li{
+      position: relative;
       a{
         padding: .5rem 2rem;
         color: white;
-        font-size: 1rem;
+        font-size: 1.25rem;
+      }
+      &:after{
+        content: "";
+        display: block;
+        height: .1rem;
+        width: calc(100% - 4rem);
+        transition: all .5s;
+        position: absolute;
+        bottom: -1rem;
+        left: 0;
+        right: 0;
+        margin: auto;
+        background-color: #FF026C;
+        transform-origin: left;
+        transform: scaleX(0);
+      }
+      &:hover{
+        cursor: pointer;
+        &:after{
+          transform: scaleX(1);
+        }
       }
       &:last-child{
+        &:after{
+          display: none;
+        }
         a{
+          margin-left: 1rem;
           background-color:var(--white20);
           border: .1rem solid var(--pink100);
           border-radius: 2rem;

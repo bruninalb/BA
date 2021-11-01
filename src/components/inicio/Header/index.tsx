@@ -2,9 +2,13 @@ import styles from "./styles.module.scss"
 import Button from "../../public/Button";
 import {useEffect, useState} from "react";
 
+
 export default function Header() {
     const [mobileMenu, setMobileMenu] = useState(false);
     const [mobileMenuStyle, setMobileMenuStyle] = useState("");
+    const [header, setHeader] = useState(true);
+    const [headerStyle, setHeaderStyle] = useState("");
+    const [pageOffset, setPageOffset] = useState(0);
 
     useEffect(() => {
         if (mobileMenu){
@@ -13,6 +17,27 @@ export default function Header() {
             setMobileMenuStyle(styles.MobileMenuOff)
         }
     }, [mobileMenu]);
+
+    const handleScroll = () => {
+        if(pageOffset > document.body.getBoundingClientRect().top){
+            setHeader(false)
+        }else{
+            setHeader(true)
+        }
+        setPageOffset(document.body.getBoundingClientRect().top)
+    }
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+    });
+
+    useEffect(() => {
+        if(header){
+            setHeaderStyle(styles.HeaderOn)
+        }else{
+            setHeaderStyle(styles.HeaderOff)
+        }
+    }, [header]);
 
     function handleShowMenu(){
         setMobileMenu(true)
@@ -24,7 +49,7 @@ export default function Header() {
     return (
         <header className={styles.Container} id="home">
             <div className={styles.TopContainer}>
-                <div className={styles.HeaderContainer}>
+                <div className={styles.HeaderContainer+" "+headerStyle}>
                     <div className={styles.LogoContainer}>
                         <span>BA</span>
                     </div>
